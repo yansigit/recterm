@@ -27,14 +27,39 @@ func GenerateSVG() {
 
 	var svgContent strings.Builder
 
+	terminalWidth := 760 // Adjust as needed, accounting for padding
+	xStart := 20
+	lineHeight := 18
+	fontSize := 14
+	charWidth := 8 // Approximate width of a monospace character
+
+	// Helper function to wrap text
+	wrapText := func(text string) []string {
+		var wrappedLines []string
+		words := strings.Split(text, " ")
+		currentLine := ""
+		for _, word := range words {
+			if len(currentLine)+len(word)+1 <= terminalWidth/charWidth {
+				if currentLine != "" {
+					currentLine += " "
+				}
+				currentLine += word
+			} else {
+				wrappedLines = append(wrappedLines, currentLine)
+				currentLine = word
+			}
+		}
+		wrappedLines = append(wrappedLines, currentLine)
+		return wrappedLines
+	}
+
 	// Calculate content height
 	y := 50
-	lineHeight := 18
 	for _, entry := range sessionData {
 		commandLines := 1
-		outputLines := len(strings.Split(entry.Output, "\n"))
-		if entry.Output == "" {
-			outputLines = 0
+		outputLines := 0
+		for _, line := range strings.Split(entry.Output, "\n") {
+			outputLines += len(wrapText(line))
 		}
 		y += (commandLines + outputLines) * lineHeight
 	}
@@ -70,10 +95,9 @@ func GenerateSVG() {
 	</style>`)
 
 	// Positioning below terminal buttons
-	x, y := 20, 55 // Start after buttons
-	fontSize := 14
-	charDelay := 0.05 // Delay per character in seconds
-	lineDelay := 0.5  // Delay before output after typing a command
+	x, y := xStart, 55 // Start after buttons
+	charDelay := 0.05  // Delay per character in seconds
+	lineDelay := 0.5   // Delay before output after typing a command
 
 	totalDelay := 0.0
 
@@ -94,26 +118,25 @@ func GenerateSVG() {
 				}
 			</style>`, i))
 
-			x += 8 // Move to the next character's position
+			x += charWidth // Move to the next character's position
 		}
 
 		// Update total delay after typing the command
 		totalDelay += float64(len(command)) * charDelay
 
 		// Reset x and move y for the next line
-		x = 20
+		x = xStart
 		y += lineHeight
 
 		// Output text appears after the command
 		for _, line := range strings.Split(entry.Output, "\n") {
-			if line == "" {
-				continue
+			for _, wrappedLine := range wrapText(line) {
+				svgContent.WriteString(fmt.Sprintf(
+					`<text x="%d" y="%d" fill="white" font-family="monospace" font-size="%d" class="output" style="animation-delay:%.2fs;">%s</text>`,
+					x, y, fontSize, totalDelay, escapeSVG(wrappedLine),
+				))
+				y += lineHeight
 			}
-			svgContent.WriteString(fmt.Sprintf(
-				`<text x="%d" y="%d" fill="white" font-family="monospace" font-size="%d" class="output" style="animation-delay:%.2fs;">%s</text>`,
-				x, y, fontSize, totalDelay, escapeSVG(line),
-			))
-			y += lineHeight
 		}
 
 		// Update total delay after output
@@ -128,7 +151,7 @@ func GenerateSVG() {
 
 func escapeSVG(text string) string {
 	text = strings.ReplaceAll(text, "&", "&amp;")
-	text = strings.ReplaceAll(text, "<", "&lt;")
-	text = strings.ReplaceAll(text, ">", "&gt;")
+	text = strings.ReplaceAll(text, "<", "<")
+	text = strings.ReplaceAll(text, ">", ">")
 	return text
 }
