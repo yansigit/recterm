@@ -1,0 +1,278 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1094"><rect width="100%" height="100%" fill="#303030" rx="10" ry="10"/><circle cx="20" cy="20" r="6" fill="#ff5f56"/><circle cx="40" cy="20" r="6" fill="#ffbd2e"/><circle cx="60" cy="20" r="6" fill="#27c93f"/><style>
+		.char {
+			opacity: 0;
+			animation-fill-mode: forwards;
+			animation-timing-function: steps(1);
+		}
+		.cursor {
+			width: 2px;
+			fill: white;
+			animation: blink 1s steps(1) infinite;
+		}
+		.output {
+			opacity: 0;
+			animation: fadein 0.5s forwards;
+		}
+		@keyframes fadein {
+			to { opacity: 1; }
+		}
+		@keyframes blink {
+			50% { opacity: 0; }
+		}
+	</style><text x="20" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.00s; animation-name: fadein0;">$</text><style>
+				@keyframes fadein0 {
+					to { opacity: 1; }
+				}
+			</style><text x="28" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.05s; animation-name: fadein1;"> </text><style>
+				@keyframes fadein1 {
+					to { opacity: 1; }
+				}
+			</style><text x="36" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.10s; animation-name: fadein2;">e</text><style>
+				@keyframes fadein2 {
+					to { opacity: 1; }
+				}
+			</style><text x="44" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.15s; animation-name: fadein3;">c</text><style>
+				@keyframes fadein3 {
+					to { opacity: 1; }
+				}
+			</style><text x="52" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.20s; animation-name: fadein4;">h</text><style>
+				@keyframes fadein4 {
+					to { opacity: 1; }
+				}
+			</style><text x="60" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.25s; animation-name: fadein5;">o</text><style>
+				@keyframes fadein5 {
+					to { opacity: 1; }
+				}
+			</style><text x="68" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.30s; animation-name: fadein6;"> </text><style>
+				@keyframes fadein6 {
+					to { opacity: 1; }
+				}
+			</style><text x="76" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.35s; animation-name: fadein7;">"</text><style>
+				@keyframes fadein7 {
+					to { opacity: 1; }
+				}
+			</style><text x="84" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.40s; animation-name: fadein8;">h</text><style>
+				@keyframes fadein8 {
+					to { opacity: 1; }
+				}
+			</style><text x="92" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.45s; animation-name: fadein9;">e</text><style>
+				@keyframes fadein9 {
+					to { opacity: 1; }
+				}
+			</style><text x="100" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.50s; animation-name: fadein10;">l</text><style>
+				@keyframes fadein10 {
+					to { opacity: 1; }
+				}
+			</style><text x="108" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.55s; animation-name: fadein11;">l</text><style>
+				@keyframes fadein11 {
+					to { opacity: 1; }
+				}
+			</style><text x="116" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.60s; animation-name: fadein12;">o</text><style>
+				@keyframes fadein12 {
+					to { opacity: 1; }
+				}
+			</style><text x="124" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.65s; animation-name: fadein13;"> </text><style>
+				@keyframes fadein13 {
+					to { opacity: 1; }
+				}
+			</style><text x="132" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.70s; animation-name: fadein14;">w</text><style>
+				@keyframes fadein14 {
+					to { opacity: 1; }
+				}
+			</style><text x="140" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.75s; animation-name: fadein15;">o</text><style>
+				@keyframes fadein15 {
+					to { opacity: 1; }
+				}
+			</style><text x="148" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.80s; animation-name: fadein16;">r</text><style>
+				@keyframes fadein16 {
+					to { opacity: 1; }
+				}
+			</style><text x="156" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.85s; animation-name: fadein17;">d</text><style>
+				@keyframes fadein17 {
+					to { opacity: 1; }
+				}
+			</style><text x="164" y="55" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:0.90s; animation-name: fadein18;">"</text><style>
+				@keyframes fadein18 {
+					to { opacity: 1; }
+				}
+			</style><text x="20" y="73" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:0.95s;">"hello word"</text><text x="20" y="91" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:0.95s;"></text><text x="20" y="109" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:1.45s; animation-name: fadein0;">$</text><style>
+				@keyframes fadein0 {
+					to { opacity: 1; }
+				}
+			</style><text x="28" y="109" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:1.50s; animation-name: fadein1;"> </text><style>
+				@keyframes fadein1 {
+					to { opacity: 1; }
+				}
+			</style><text x="36" y="109" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:1.55s; animation-name: fadein2;">g</text><style>
+				@keyframes fadein2 {
+					to { opacity: 1; }
+				}
+			</style><text x="44" y="109" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:1.60s; animation-name: fadein3;">o</text><style>
+				@keyframes fadein3 {
+					to { opacity: 1; }
+				}
+			</style><text x="52" y="109" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:1.65s; animation-name: fadein4;"> </text><style>
+				@keyframes fadein4 {
+					to { opacity: 1; }
+				}
+			</style><text x="60" y="109" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:1.70s; animation-name: fadein5;">v</text><style>
+				@keyframes fadein5 {
+					to { opacity: 1; }
+				}
+			</style><text x="68" y="109" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:1.75s; animation-name: fadein6;">e</text><style>
+				@keyframes fadein6 {
+					to { opacity: 1; }
+				}
+			</style><text x="76" y="109" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:1.80s; animation-name: fadein7;">r</text><style>
+				@keyframes fadein7 {
+					to { opacity: 1; }
+				}
+			</style><text x="84" y="109" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:1.85s; animation-name: fadein8;">s</text><style>
+				@keyframes fadein8 {
+					to { opacity: 1; }
+				}
+			</style><text x="92" y="109" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:1.90s; animation-name: fadein9;">i</text><style>
+				@keyframes fadein9 {
+					to { opacity: 1; }
+				}
+			</style><text x="100" y="109" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:1.95s; animation-name: fadein10;">o</text><style>
+				@keyframes fadein10 {
+					to { opacity: 1; }
+				}
+			</style><text x="108" y="109" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:2.00s; animation-name: fadein11;">n</text><style>
+				@keyframes fadein11 {
+					to { opacity: 1; }
+				}
+			</style><text x="20" y="127" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:2.05s;">go version go1.23.4 darwin/arm64</text><text x="20" y="145" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:2.05s;"></text><text x="20" y="163" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:2.55s; animation-name: fadein0;">$</text><style>
+				@keyframes fadein0 {
+					to { opacity: 1; }
+				}
+			</style><text x="28" y="163" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:2.60s; animation-name: fadein1;"> </text><style>
+				@keyframes fadein1 {
+					to { opacity: 1; }
+				}
+			</style><text x="36" y="163" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:2.65s; animation-name: fadein2;">g</text><style>
+				@keyframes fadein2 {
+					to { opacity: 1; }
+				}
+			</style><text x="44" y="163" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:2.70s; animation-name: fadein3;">o</text><style>
+				@keyframes fadein3 {
+					to { opacity: 1; }
+				}
+			</style><text x="52" y="163" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:2.75s; animation-name: fadein4;"> </text><style>
+				@keyframes fadein4 {
+					to { opacity: 1; }
+				}
+			</style><text x="60" y="163" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:2.80s; animation-name: fadein5;">h</text><style>
+				@keyframes fadein5 {
+					to { opacity: 1; }
+				}
+			</style><text x="68" y="163" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:2.85s; animation-name: fadein6;">e</text><style>
+				@keyframes fadein6 {
+					to { opacity: 1; }
+				}
+			</style><text x="76" y="163" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:2.90s; animation-name: fadein7;">l</text><style>
+				@keyframes fadein7 {
+					to { opacity: 1; }
+				}
+			</style><text x="84" y="163" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:2.95s; animation-name: fadein8;">p</text><style>
+				@keyframes fadein8 {
+					to { opacity: 1; }
+				}
+			</style><text x="92" y="163" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:3.00s; animation-name: fadein9;"> </text><style>
+				@keyframes fadein9 {
+					to { opacity: 1; }
+				}
+			</style><text x="100" y="163" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:3.05s; animation-name: fadein10;">r</text><style>
+				@keyframes fadein10 {
+					to { opacity: 1; }
+				}
+			</style><text x="108" y="163" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:3.10s; animation-name: fadein11;">u</text><style>
+				@keyframes fadein11 {
+					to { opacity: 1; }
+				}
+			</style><text x="116" y="163" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:3.15s; animation-name: fadein12;">n</text><style>
+				@keyframes fadein12 {
+					to { opacity: 1; }
+				}
+			</style><text x="20" y="181" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">usage: go run [build flags] [-exec xprog] package [arguments...]</text><text x="20" y="199" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;"></text><text x="20" y="217" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">Run compiles and runs the named main Go package.</text><text x="20" y="235" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">Typically the package is specified as a list of .go source files from a single</text><text x="20" y="253" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">directory, but it may also be an import path, file system path, or pattern</text><text x="20" y="271" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">matching a single known package, as in 'go run .' or 'go run my/cmd'.</text><text x="20" y="289" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;"></text><text x="20" y="307" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">If the package argument has a version suffix (like @latest or @v1.0.0),</text><text x="20" y="325" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">"go run" builds the program in module-aware mode, ignoring the go.mod file in</text><text x="20" y="343" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">the current directory or any parent directory, if there is one. This is useful</text><text x="20" y="361" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">for running programs without affecting the dependencies of the main module.</text><text x="20" y="379" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;"></text><text x="20" y="397" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">If the package argument doesn't have a version suffix, "go run" may run in</text><text x="20" y="415" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">module-aware mode or GOPATH mode, depending on the GO111MODULE environment</text><text x="20" y="433" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">variable and the presence of a go.mod file. See 'go help modules' for details.</text><text x="20" y="451" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">If module-aware mode is enabled, "go run" runs in the context of the main</text><text x="20" y="469" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">module.</text><text x="20" y="487" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;"></text><text x="20" y="505" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">By default, 'go run' runs the compiled binary directly: 'a.out arguments...'.</text><text x="20" y="523" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">If the -exec flag is given, 'go run' invokes the binary using xprog:</text><text x="20" y="541" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">'xprog a.out arguments...'.</text><text x="20" y="559" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">If the -exec flag is not given, GOOS or GOARCH is different from the system</text><text x="20" y="577" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">default, and a program named go_$GOOS_$GOARCH_exec can be found</text><text x="20" y="595" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">on the current search path, 'go run' invokes the binary using that program,</text><text x="20" y="613" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">for example 'go_js_wasm_exec a.out arguments...'. This allows execution of</text><text x="20" y="631" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">cross-compiled programs when a simulator or other execution method is</text><text x="20" y="649" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">available.</text><text x="20" y="667" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;"></text><text x="20" y="685" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">By default, 'go run' compiles the binary without generating the information</text><text x="20" y="703" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">used by debuggers, to reduce build time. To include debugger information in</text><text x="20" y="721" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">the binary, use 'go build'.</text><text x="20" y="739" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;"></text><text x="20" y="757" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">The exit status of Run is not the exit status of the compiled binary.</text><text x="20" y="775" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;"></text><text x="20" y="793" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">For more about build flags, see 'go help build'.</text><text x="20" y="811" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">For more about specifying packages, see 'go help packages'.</text><text x="20" y="829" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;"></text><text x="20" y="847" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;">See also: go build.</text><text x="20" y="865" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:3.20s;"></text><text x="20" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:3.70s; animation-name: fadein0;">$</text><style>
+				@keyframes fadein0 {
+					to { opacity: 1; }
+				}
+			</style><text x="28" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:3.75s; animation-name: fadein1;"> </text><style>
+				@keyframes fadein1 {
+					to { opacity: 1; }
+				}
+			</style><text x="36" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:3.80s; animation-name: fadein2;">p</text><style>
+				@keyframes fadein2 {
+					to { opacity: 1; }
+				}
+			</style><text x="44" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:3.85s; animation-name: fadein3;">i</text><style>
+				@keyframes fadein3 {
+					to { opacity: 1; }
+				}
+			</style><text x="52" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:3.90s; animation-name: fadein4;">n</text><style>
+				@keyframes fadein4 {
+					to { opacity: 1; }
+				}
+			</style><text x="60" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:3.95s; animation-name: fadein5;">g</text><style>
+				@keyframes fadein5 {
+					to { opacity: 1; }
+				}
+			</style><text x="68" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:4.00s; animation-name: fadein6;"> </text><style>
+				@keyframes fadein6 {
+					to { opacity: 1; }
+				}
+			</style><text x="76" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:4.05s; animation-name: fadein7;">1</text><style>
+				@keyframes fadein7 {
+					to { opacity: 1; }
+				}
+			</style><text x="84" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:4.10s; animation-name: fadein8;">9</text><style>
+				@keyframes fadein8 {
+					to { opacity: 1; }
+				}
+			</style><text x="92" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:4.15s; animation-name: fadein9;">2</text><style>
+				@keyframes fadein9 {
+					to { opacity: 1; }
+				}
+			</style><text x="100" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:4.20s; animation-name: fadein10;">.</text><style>
+				@keyframes fadein10 {
+					to { opacity: 1; }
+				}
+			</style><text x="108" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:4.25s; animation-name: fadein11;">1</text><style>
+				@keyframes fadein11 {
+					to { opacity: 1; }
+				}
+			</style><text x="116" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:4.30s; animation-name: fadein12;">0</text><style>
+				@keyframes fadein12 {
+					to { opacity: 1; }
+				}
+			</style><text x="124" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:4.35s; animation-name: fadein13;">0</text><style>
+				@keyframes fadein13 {
+					to { opacity: 1; }
+				}
+			</style><text x="132" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:4.40s; animation-name: fadein14;">.</text><style>
+				@keyframes fadein14 {
+					to { opacity: 1; }
+				}
+			</style><text x="140" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:4.45s; animation-name: fadein15;">0</text><style>
+				@keyframes fadein15 {
+					to { opacity: 1; }
+				}
+			</style><text x="148" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:4.50s; animation-name: fadein16;">.</text><style>
+				@keyframes fadein16 {
+					to { opacity: 1; }
+				}
+			</style><text x="156" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:4.55s; animation-name: fadein17;">1</text><style>
+				@keyframes fadein17 {
+					to { opacity: 1; }
+				}
+			</style><text x="164" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:4.60s; animation-name: fadein18;">3</text><style>
+				@keyframes fadein18 {
+					to { opacity: 1; }
+				}
+			</style><text x="172" y="883" fill="white" font-family="monospace" font-size="14" class="char" style="animation-delay:4.65s; animation-name: fadein19;">6</text><style>
+				@keyframes fadein19 {
+					to { opacity: 1; }
+				}
+			</style><text x="20" y="901" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:4.70s;">PING 192.100.0.136 (192.100.0.136): 56 data bytes</text><text x="20" y="919" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:4.70s;">64 bytes from 192.100.0.136: icmp_seq=0 ttl=64 time=15.312 ms</text><text x="20" y="937" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:4.70s;">64 bytes from 192.100.0.136: icmp_seq=1 ttl=64 time=17.263 ms</text><text x="20" y="955" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:4.70s;">64 bytes from 192.100.0.136: icmp_seq=2 ttl=64 time=13.704 ms</text><text x="20" y="973" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:4.70s;">64 bytes from 192.100.0.136: icmp_seq=3 ttl=64 time=12.893 ms</text><text x="20" y="991" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:4.70s;">64 bytes from 192.100.0.136: icmp_seq=4 ttl=64 time=15.511 ms</text><text x="20" y="1009" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:4.70s;"></text><text x="20" y="1027" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:4.70s;">--- 192.100.0.136 ping statistics ---</text><text x="20" y="1045" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:4.70s;">5 packets transmitted, 5 packets received, 0.0% packet loss</text><text x="20" y="1063" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:4.70s;">round-trip min/avg/max/stddev = 12.893/14.937/17.263/1.522 ms</text><text x="20" y="1081" fill="white" font-family="monospace" font-size="14" class="output" style="animation-delay:4.70s;"></text></svg>
