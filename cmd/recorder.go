@@ -100,6 +100,10 @@ func RecordTerminal() {
 
 	// Save session entries to a JSON file
 	sessionLogFile := "data/session.json"
+	if err := os.MkdirAll("data", os.ModePerm); err != nil {
+		fmt.Println("Error creating directory:", err)
+		return
+	}
 	file, err := os.Create(sessionLogFile)
 	if err != nil {
 		fmt.Println("Error creating log file:", err)
