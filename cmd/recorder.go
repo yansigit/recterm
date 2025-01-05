@@ -11,6 +11,7 @@ import (
 	"strings"
 	"syscall"
 	"time"
+	"unicode/utf8"
 )
 
 type SessionEntry struct {
@@ -30,6 +31,7 @@ func RecordTerminal() {
 
 	// Interactive terminal-like prompt
 	reader := bufio.NewReader(os.Stdin)
+	var endTime float64 // Declare endTime outside the loop
 	for {
 		// Show a terminal-like prompt
 		fmt.Print("$ ")
@@ -54,7 +56,7 @@ func RecordTerminal() {
 		cmd := exec.Command(commandArgs[0], commandArgs[1:]...)
 
 		// Capture output and error streams
-		outputBuf := new(strings.Builder)
+		outputBuf := &strings.Builder{}
 		multiWriter := io.MultiWriter(os.Stdout, outputBuf)
 		cmd.Stdout = multiWriter
 		cmd.Stderr = multiWriter
@@ -82,12 +84,15 @@ func RecordTerminal() {
 		}
 
 		// Record the end time
-		endTime := float64(time.Now().UnixNano()) / 1e9
+		endTime = float64(time.Now().UnixNano()) / 1e9
+
+		// Filter out backspace characters from the output
+		filteredOutput := filterBackspace(outputBuf.String())
 
 		// Store the session entry
 		sessionEntries = append(sessionEntries, SessionEntry{
 			Command:   userInput,
-			Output:    outputBuf.String(),
+			Output:    filteredOutput,
 			StartTime: startTime,
 			EndTime:   endTime,
 		})
@@ -110,4 +115,22 @@ func RecordTerminal() {
 	}
 
 	fmt.Println("Session log saved to", sessionLogFile)
+}
+
+func filterBackspace(s string) string {
+	var result strings.Builder
+	for _, r := range s {
+		if r == '\b' {
+			// Remove the last character if the buffer is not empty
+			if result.Len() > 0 {
+				rs := result.String()
+				_, size := utf8.DecodeLastRuneInString(rs)
+				result.Reset()
+				result.WriteString(rs[:len(rs)-size])
+			}
+		} else {
+			result.WriteRune(r)
+		}
+	}
+	return result.String()
 }
