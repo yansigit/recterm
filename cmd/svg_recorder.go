@@ -104,13 +104,14 @@ func GenerateSVG() {
 	for _, entry := range sessionData {
 		command := "$ " + entry.Command
 		// Typing animation for the command
+		currentCommandX := xStart
 		for i, char := range command {
 			delay := totalDelay + float64(i)*charDelay
 
 			// Character appears with animation
 			svgContent.WriteString(fmt.Sprintf(
 				`<text x="%d" y="%d" fill="white" font-family="monospace" font-size="%d" class="char" style="animation-delay:%.2fs; animation-name: fadein%d;">%s</text>`,
-				x, y, fontSize, delay, i, escapeSVG(string(char)),
+				currentCommandX, y, fontSize, delay, i, escapeSVG(string(char)),
 			))
 			svgContent.WriteString(fmt.Sprintf(`<style>
 				@keyframes fadein%d {
@@ -118,18 +119,18 @@ func GenerateSVG() {
 				}
 			</style>`, i))
 
-			x += charWidth // Move to the next character's position
+			currentCommandX += charWidth // Move to the next character's position
 		}
 
 		// Update total delay after typing the command
 		totalDelay += float64(len(command)) * charDelay
 
 		// Reset x and move y for the next line
-		x = xStart
 		y += lineHeight
 
 		// Output text appears after the command
 		for _, line := range strings.Split(entry.Output, "\n") {
+			x = xStart // Reset x position for each line of output
 			for _, wrappedLine := range wrapText(line) {
 				svgContent.WriteString(fmt.Sprintf(
 					`<text x="%d" y="%d" fill="white" font-family="monospace" font-size="%d" class="output" style="animation-delay:%.2fs;">%s</text>`,
@@ -150,8 +151,20 @@ func GenerateSVG() {
 }
 
 func escapeSVG(text string) string {
-	text = strings.ReplaceAll(text, "&", "&amp;")
-	text = strings.ReplaceAll(text, "<", "<")
-	text = strings.ReplaceAll(text, ">", ">")
-	return text
+	var escaped strings.Builder
+	for _, r := range text {
+		if r >= ' ' && r != '\b' { // Keep only printable characters and not backspace
+			switch r {
+			case '&':
+				escaped.WriteString("&amp;")
+			case '<':
+				escaped.WriteString("<")
+			case '>':
+				escaped.WriteString(">")
+			default:
+				escaped.WriteRune(r)
+			}
+		}
+	}
+	return escaped.String()
 }
